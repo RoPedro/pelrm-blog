@@ -1,5 +1,6 @@
 # Hugo configuration file
-title: My Site
+title: pelrm
+languageCode: pt_BR
 
 # import hextra as module
 module:
@@ -18,14 +19,11 @@ markup:
 
 menu:
   main:
-    - name: Docs
-      pageRef: /docs
-      weight: 1
     - name: About
       pageRef: /about
       weight: 2
     - name: Contact ↗
-      url: "https://github.com/imfing"
+      url: "https://github.com/RoPedro"
       weight: 3
     - name: Search
       weight: 4
@@ -38,7 +36,7 @@ menu:
         icon: github
     - name: Twitter
       weight: 6
-      url: "https://twitter.com/"
+      url: "https://x.com/roped_"
       params:
         icon: x-twitter
 
@@ -48,9 +46,15 @@ params:
     displayLogo: false
 
   footer:
-    displayCopyright: false
+    displayCopyright: true
     displayPoweredBy: true
 
+  author:
+    name: Pedro Moreira
+    email: pedro.lucas.rocha72@gmail.com
+
+  descrription: "Blog do Pedro. Tecnologia. Documentação. Geek."
+
   editURL:
-    enable: true
+    enable: false
     base: "https://github.com/imfing/hextra-starter-template/edit/main/content"
