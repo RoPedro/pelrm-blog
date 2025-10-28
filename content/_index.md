@@ -1,17 +1,10 @@
 ---
-title: My Site
+title: pelrm
 toc: false
 ---
 
-This is the landing page.
+## 2025 - Setembro
 
-## Explore
+- [Como eu faço pra programar em Linux mesmo no Windows (não é com WSL2)](/2025/10/28/como-faço-pra-programar-em-linux-no-windows/)
 
-{{< cards >}}
-  {{< card link="docs" title="Docs" icon="book-open" >}}
-  {{< card link="about" title="About" icon="user" >}}
-{{< /cards >}}
 
-## Documentation
-
-For more information, visit [Hextra](https://imfing.github.io/hextra).
