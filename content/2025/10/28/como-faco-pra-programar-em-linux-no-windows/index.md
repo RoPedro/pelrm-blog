@@ -19,7 +19,7 @@ Daí, assistindo o canal do [Fabio Akita](https://www.youtube.com/@Akitando), eu
 ## O Dilema do Docker
 O que acontece é o seguinte, Docker é uma tecnologia excepcional que eu não conseguiria viver sem, mas ele tem um tradeoff importante quando eu rodo ele várias vezes: Cada vez que você builda e roda uma nova imagem, o diretório `/var/lib/docker/...` enche, e geralmente é cache, dispensável e reconstruível, e dependendo das aplicações que você usa, enche **muito** rápido.
 
-![docker-disk-usage](/static/images/linux-on-windows-docs/docker-disk-usage.png)
+![docker-disk-usage](docker-disk-usage.png)
 
 Tá, mas o que isso tem a ver? Não é só deletar deletar o cache periodicamente com um `docker system prune -a`? e sim, isso resolveria o problema, **mas não no WSL2**. isso porque o filesystem do WSL2 é um arquivão VHDX, que, pra o que se propõe, é bem competente, e apesar de só ser compatível com Hyper-V, isso faz ele ser bem rápido, tanto que o WSL2 roda com uma performance próxima a Linux nativa.
 
@@ -37,7 +37,7 @@ Antes de mais nada, eu preciso avisar que eu **não** recomendo esse setup pra q
 ## Configurando a Máquina Virtual
 Tá, finalmente sobre o setup. Com o VMWare Workstation baixado, eu crio uma VM simples e instalo [Arch Linux](https://archlinux.org/) nela, com configurações bem padrões, usando o comando `archinstall` quando a iso boota. A VM em sí eu dei 4 threads, e 6.5GB de ram, eu já tentei com 4gb, e exclusivamente pra desenvolvimento web com containers, funciona bem, mas eu aumentei um pouco porque eu tava mexendo muito com imagens de Arch Linux em Docker pra testar meus scripts. A partir daí, eu instalo Git, e rodo meu próprio script de configuração que baixa e ativa todos os meus dotfiles ([archdots](https://github.com/RoPedro/archdots/)), se não conhece o conceito, são vários arquivos que começam com . que contém as configurações de diversos softwares em Linux, como por exemplo, os atalhos de um editor de texto: [Vídeo de Dotfiles do Fireship](https://youtu.be/r_MpUP6aKiQ)
 
-![meu-terminal](/static/images/linux-on-windows-docs/zsh-env.png)
+![meu-terminal](zsh-env.png)
 
 E é isso, o ambiente Linux tá pronto, agora falta só configurar a integração com Windows pra parecer "nativo". Começando com a parte de redes. no VMWare, eu troco o Network Adaptar pra Bridge, em vez do default NAT. O que isso faz, basicamente, é que pro seu roteador, a VM é interpretada como um dispositivo físico, que precisa de um IP de verdade, tipo 192.168.1.5, daí eu posso, dentro do Linux, rodar `ip a` pra saber o novo IP que o roteador deu pra VM, ir nas configurações do roteador e reservar esse IP pra esse Linux, assim, em caso de reboot, o IP não vai mudar.
 
@@ -47,7 +47,7 @@ Com o IP fixo configurado, falta configurar o acesso via SSH. No Windows Termina
 
 substituindo `name` pelo nome de usuário do Linux, e `ip_address` pelo IP da VM. É isso, agora sempre que  abrir o profile `arch` no Windows Terminal, ele vai pedir o password e eu tô dentro do Linux.
 
-![windows-terminal-arch-profile](/static/images/linux-on-windows-docs/win-term-arch-profile.png)
+![windows-terminal-arch-profile](win-term-arch-profile.png)
 
 Agora falta o VSCode, nele é ainda mais fácil, só preciso confirmar que tenho a extensão [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) instalada, apertar CTRL + Shift + P, e procurar `Connect to Host`, seguir as intruções e boa.
 
