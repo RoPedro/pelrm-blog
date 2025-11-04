@@ -43,7 +43,9 @@ E é isso, o ambiente Linux tá pronto, agora falta só configurar a integraçã
 
 Com o IP fixo configurado, falta configurar o acesso via SSH. No Windows Terminal, eu crio um novo perfil chamado `arch`, e configuro ele pra sempre rodar o comando:
 
-`ssh <name>@<ip_address>`
+```bash
+ssh <name>@<ip_address>
+```
 
 substituindo `name` pelo nome de usuário do Linux, e `ip_address` pelo IP da VM. É isso, agora sempre que  abrir o profile `arch` no Windows Terminal, ele vai pedir o password e eu tô dentro do Linux.
 
@@ -61,11 +63,15 @@ A cereja do bolo vem agora, o VMWare (e eu não sei se os concorrentes tem essa 
 Não adianta nada ter esse setup bonitinho e não poder autenticar com repositórios privados de GitHub, pra isso precisamos das nossas chaves de SSH na VM também. O problema são dois: Eu não quero ter que digitar a senha toda vez que eu for usar a VM, e eu preciso conseguir autenticar com o meu GitHub, GitLab, ou outras ferramentas que autenticam com chaves SSH.
 Considerando que as minhas chaves estão no diretório padrão do Windows (`%USERPROFILE%/.ssh`), eu posso fazer o seguinte:
 
-`ssh-copy-id -i %USERPROFILE%\.ssh.id_ed25519.pub <user>@<ip_address>`
+```bash
+ssh-copy-id -i %USERPROFILE%\.ssh.id_ed25519.pub <user>@<ip_address>
+```
 
 Isso é suficiente pra mim poder logar na na VM sem precisar digitar a senha, mas pra ter minha chave privada, precisamos de uma transferência encriptada, o mais fácil é:
 
-`scp %USERPROFILE%\.ssh\id_ed25519* user@new-machine:~/.ssh/`
+```bash
+scp %USERPROFILE%\.ssh\id_ed25519* user@new-machine:~/.ssh/
+```
 
 daí a gente muda as permissões:
 
