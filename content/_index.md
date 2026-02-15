@@ -3,7 +3,7 @@ title: pelrm
 toc: false
 ---
 ## 2026 - Fevereiro
-- [Meu Self-Hosting alternativo de músicas](/content/2026/02/15/meu-selfhosting-alternativo-de-musicas/)
+- [Meu Self-Hosting alternativo de músicas](/2026/02/15/meu-selfhosting-alternativo-de-musicas/)
 
 ## 2025 - Setembro
 
