@@ -43,7 +43,9 @@ Essa parte é a que eu diria que é à gosto do freguês. Mas é legal escolher 
 
 A partir daí, o processo é o mesmo em todos os apps, adicionar a pasta compartilhada do Syncthing, e, caso eu organizei as tags direitinho, eu vou ter uma interface bem parecida com Spotify pra escutar música.
 
-![preview-auxio-player](preview-auxio-player.mp4 "Click to play")
+<video width="640" controls preload="metadata">
+  <source src="preview_auxio_player.mp4" type="video/mp4">
+</video>
 
 ![preview-auxio-genres](preview-auxio-genres.jpg)
 
