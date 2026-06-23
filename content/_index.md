@@ -1,7 +1,9 @@
 ---
 title: pelrm
-toc: false
 ---
+## 2026 - Junho
+- [Vassourinhas: Como apps de limpeza pioram seu Android](/2026/06/23/vassourinhas-como-apps-de-limpeza-pioram-seu-android/)
+
 ## 2026 - Maio
 - [XInput precisa melhorar: Minha jornada com Gamepads](/2026/05/21/xinput-precisa-melhorar-minha-jornada-com-gamepads/)
 
