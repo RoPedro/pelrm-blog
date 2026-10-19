@@ -1,6 +1,10 @@
 ---
 title: pelrm
 ---
+
+## 2026 - Outubro
+- [Street Fighter 2026 é um filme que me incomoda](/2026/10/19/street-fighter-2026-e-um-filme-que-me-incomoda)
+
 ## 2026 - Junho
 - [Vassourinhas: Como apps de limpeza pioram seu Android](/2026/06/23/vassourinhas-como-apps-de-limpeza-pioram-seu-android/)
 
